@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Tree struct {
+type SplayTree struct {
 	root *Node
 }
 
@@ -49,7 +49,7 @@ func zigzag(n *Node) {
 	rotate(n)
 }
 
-func (t *Tree) Splay(n *Node) {
+func (t *SplayTree) Splay(n *Node) {
 	for n.parent != nil {
 		var parent = n.parent
 		if parent.parent == nil {
